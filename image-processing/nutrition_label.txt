@@ -1,0 +1,6 @@
+0,1
+total fat,10g
+saturated fat,1.5g
+trans fat,0g
+sodium,230mg
+protein,2g
