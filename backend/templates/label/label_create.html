@@ -1,10 +1,22 @@
 {% extends "home.html" %}
 
-{% block content %}
+{% block form %}
+<form action = "." method='POST' enctype="multipart/form-data"> {% csrf_token %}
 
-<form method='POST'> {% csrf_token %}
-{{form.as_p}}
-<input type='submit' value='Save' />
+     <!--Enter Personal Info-->
+        <legend>Please Enter Your Information:</legend>
+        <label for="weight">Weight: <input id="weight" type="number" name = "weight" required></label>
+        <label for="height">Height: <input id="height" type="number" name = "height" required></label>
+        <label for="age">Age: <input id="age" type="number" name = "age"required></label>
+        <label for="sex">Sex: <input id="sex" type="text" name = "sex" required></label>
+
+    <!--Upload Image of Nutrition Label-->
+
+        <legend>Please Upload Nutrition Label:</legend>
+            <!-- Input field for file upload -->
+            <input type="file" id="image-upload" name="image" accept=".jpg, .jpeg" required>
+
+    <input type="submit" value="submit">
 </form>
 
-{% endblock %}
+{% endblock form %}

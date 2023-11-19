@@ -4,16 +4,7 @@ from .models import Label
 
 from .forms import labelForm
 # Create your views here.
-def label_create_view(request):
-    
-    form = labelForm(request.POST or None)
-    if form.is_valid():
-        form.save()
-    
-    context = {
-        'form': form
-    }
-    return render(request, "label/label_create.html", context)
+
 
 def label_detail_view(request):
     obj = Label.objects.get(id = 1)

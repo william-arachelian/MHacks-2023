@@ -18,12 +18,13 @@ from django.contrib import admin
 from django.urls import path
 
 from pages.views import home_view
-from label.views import label_detail_view, label_create_view
+from label.views import label_detail_view
+from user.views import label_create_view
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", home_view),
+    # path("", home_view),
     path("label/", label_detail_view),
-    path("create/", label_create_view)
+    path("", label_create_view)
 ]
