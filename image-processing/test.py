@@ -1,4 +1,4 @@
-from paddleocr import PaddleOCR,draw_ocr
+from paddleocr import PaddleOCR
 import cv2
 import numpy as np
 import pandas as pd
@@ -22,7 +22,7 @@ def split_nutrition_string(nutrition_string):
         return None
 
 
-main_nutrition_facts = ["serving size", "fiber", "protein", "Carbohydrates", "total fat", "saturated fat", "trans fat", "cholesterol", "sodium"]
+main_nutrition_facts = ["serving size", "fiber", "protein", "total carbohydrate", "total fat", "saturated fat", "trans fat", "cholesterol", "sodium"]
 
 ocr = PaddleOCR(lang='en') # need to run only once to download and load model into memory
 img_path = 'thing.jpg'
@@ -35,9 +35,14 @@ result = ocr.ocr(gray)
 item_res = []
 for idx in range(len(result)):
     res = result[idx]
-    for line in res:
+    for counter, line in enumerate(res):
         text = line[1][0].lower()
-
+        if text == "calories":      
+            if res[counter - 1][1][0].isdigit():
+                item_res.append(("calories", res[counter - 1][1][0]))
+            elif res[counter + 1][1][0].isdigit():
+                item_res.append(("calories", res[counter + 1][1][0]))
+        
         try_split = split_nutrition_string(text)
         if try_split:
             if try_split[0] in main_nutrition_facts:
