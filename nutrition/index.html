@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet"/>
+  </head>
+  <body>
+  
+    <div class="background">
+      <h1 class="title">Nutrition Label Scanner</h1>
+ 
+
+
+
+      <form>
+        <!--Enter Personal Info-->
+        <fieldset>
+          <legend>Please Enter Your Information:</legend>
+          <label for="weight">Weight: <input id="weight" type="number" required></label>
+          <label for="height">Height: <input id="height" type="number" required></label>
+          <label for="age">Age: <input id="age" type="number" required></label>
+          <label for="sex">Sex: <input id="sex" type="text" required></label>
+        </fieldset>
+        
+        <!--Upload Image of Nutrition Label-->
+        <fieldset>
+
+          <legend>Please Upload Nutrition Label:</legend>
+
+            <form action="/upload" method="post" enctype="multipart/form-data">
+                <!-- Input field for file upload -->
+                <input type="file" id="image-upload" name="image" accept=".jpg, .jpeg" required>
+            </form>
+        </fieldset>
+
+        <button type="submit">Submit</button>
+
+        
+        
+      </form>
+
+    </div>
+  </body>
+</html>
