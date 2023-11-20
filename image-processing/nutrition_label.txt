@@ -1,0 +1,8 @@
+0,1
+calories ,160
+total fat,10g
+saturated fat,1.5g
+trans fat,0g
+sodium,230mg
+total carbohydrate,15g
+protein,2g

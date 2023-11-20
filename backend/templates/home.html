@@ -1,0 +1,18 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="{% static 'style.css' %}" rel="stylesheet"/>
+  </head>
+  <body>
+  
+    <div class="background">
+      <h1 class="title">Nutrition Label Scanner</h1>
+        {% block form %}
+
+        {% endblock %}
+    </div>
+  </body>
+</html>

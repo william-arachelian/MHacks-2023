@@ -1,0 +1,49 @@
+body {
+  background-image: url(https://images.squarespace-cdn.com/content/v1/5e498dfc824a5d6cda06f58e/1583296884756-QEH3WI2LHSLCGSOZVABR/image-asset.jpeg);
+}
+
+
+.title {
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif
+}
+
+
+
+
+h2 {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.background {
+  width: 60%;
+  /*background-color: rgba(200, 215, 230, 0.80);*/
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.80), rgba(150, 150, 255, 0.80));
+  margin-left: auto;
+  margin-right: auto;
+  
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 10px;
+  padding-bottom: 100px;
+  font-family: sans-serif;
+
+  border-radius: 40px;
+  
+}
+
+.nutrition-box {
+  
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin: 0.5rem 0;
+}
+
+
+
+
